@@ -1,0 +1,12 @@
+
+<div class = "container-box">
+
+<% if current_user %>
+<h1 class ="chat-heading">Chat App</h1>
+<h5 class = "start_button"><%= link_to "Start chatting", rooms_path %></h5>
+<%= button_to "Logout", destroy_user_session_path, method: :delete %>
+<% else %>
+<div class = "login_button"><%= link_to "Sign Up", new_user_registration_path %></div>
+<div class = "login_button"><%= link_to "Login", new_user_session_path %></div>
+<% end %>
+</div>
